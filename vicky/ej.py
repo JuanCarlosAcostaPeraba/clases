@@ -1,14 +1,19 @@
-"""
-Crea una función que recibe dos parámetros,
-una cadena de texto y el número de veces que
-se repite la impresión de dicha cadena de texto
-"""
-def funcion(a, b):
-	for i in range(b):
-		print(a)
-		
+def maxima_semana(parámetro):
+	x = []
+	tempmax = 0
+	for i in range(len(parámetro)):
+		for j in range(len(parámetro[i])):
+			for k in range(len(parámetro[i][j])):
+				if tempmax < parámetro[i][j][k]:
+					tempmax = parámetro[i][j][k]
+		x.append(tempmax) # meter en lista
+		tempmax = 0
+	return x
 
-funcion("hola vicky", 3)
-# "hola vicky"
-# "hola vicky"
-# "hola vicky"
+lista = [
+	((6, 2),(2,0),(4,3)),
+	((3,2), (2, 1), (3,2)),
+	((3,2), (10, 1), (3,2))
+	]
+
+print(maxima_semana(lista))
