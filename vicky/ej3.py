@@ -12,6 +12,7 @@ def sum(matr1, matr2):
 	lista = []
 	contador = 0
 	for i in range(len(matr1)):
+		x = []
 		for j in range(len(matr1[i])):
 			x.append(matr1[i][j] + matr2[i][j])
 		lista.append(x)
