@@ -9,3 +9,11 @@ imagen = [
 ]
 
 magnitud = 100
+
+# ---
+
+def delete_from_list(lista, valor_a_eliminar):
+	# Elimina los elementos de una lista que coincidan con el valor dado
+	# Devuelve la lista original modificada
+	while valor_a_eliminar in lista:
+		lista.remove(valor_a_eliminar)
