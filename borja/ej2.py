@@ -7,9 +7,9 @@ temp = [
 def maxmima_semada(temperaturas):
 	lista = []
 	contador = 0
-	for i in range(len(temperaturas)):
-		for j in range(len(temperaturas[i])):
-			for k in range(len(temperaturas[i][j])):
+	for i in range(len(temperaturas)): # semana
+		for j in range(len(temperaturas[i])): # dias
+			for k in range(len(temperaturas[i][j])): # temperaturas
 				if contador < temperaturas[i][j][k]:
 					contador = temperaturas[i][j][k]
 		lista.append(contador)
