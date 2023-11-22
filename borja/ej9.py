@@ -1,5 +1,4 @@
 def evaluate(t):
-	'''funcion recursiva que resuelve las operaciones de las tuplas'''
 	if type(t) == tuple:
 		if t[1] == '+':
 			return evaluate(t[0]) + evaluate(t[2])
