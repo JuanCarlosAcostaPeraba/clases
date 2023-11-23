@@ -7,5 +7,5 @@ def min(l):
 			return l[0]
 		else:
 			return min(l[1:])
-		
+
 print(min([1, -4, 5, 2, 6, 10]))
