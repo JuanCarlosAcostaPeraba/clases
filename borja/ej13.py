@@ -26,6 +26,17 @@ def datos_por_asignatura(data):
 				lista.append([data_alumno, data_asignatura[0], 0])
 	return lista
 
+def semestre(data, semestre):
+	d = {}
+	for code_asignatura, data_asignatura in data[0].items():
+		if data_asignatura[1] == semestre:
+			d[data_asignatura[0]] = 0
+			for dni, nota in data[2][code_asignatura].items():
+				if nota >= 5:
+					d[data_asignatura[0]] += 1
+	return d
+
+					
 
 data = (
 	{
@@ -45,3 +56,4 @@ data = (
 print(aprobados(data, "456"))
 print(nota_media(data, "Pepe")) # 5 + 7 / 2 = 6
 print(datos_por_asignatura(data))
+print(semestre(data, 1))
